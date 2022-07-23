@@ -1,0 +1,52 @@
+body {
+  font-family: var(--ff-body);
+  font-size: var(--fs-body);
+  overflow-x: hidden;
+}
+
+//containers and flex boxes
+
+.container {
+  --width: 1300px;
+  --margin: 2rem;
+
+  width: min(var(--width), 100% - (var(--margin) * 2));
+  margin-inline: auto;
+}
+
+.even-columns {
+  display: flex;
+
+  > div,
+  > nav {
+    width: 50%;
+  }
+}
+
+.min-height-full-screen {
+  min-height: 95vh;
+}
+
+.flex-align-centered {
+  align-items: center;
+}
+
+// full size image width beyond container
+
+.full-sized-img {
+  transform: scale(1.5);
+  position: relative;
+  left: 10rem;
+}
+
+//background square
+
+.bg-square {
+  position: absolute;
+  background: var(--clr-neutral-300);
+  border-radius: 0 0 0 5rem;
+  width: 50vw;
+  height: 50vh;
+  top: 0;
+  z-index: -1;
+}

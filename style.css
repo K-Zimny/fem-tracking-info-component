@@ -1,3 +1,89 @@
+.text-badge {
+  --background: var(--clr-neutral-900);
+  --radius: 2rem;
+  --padding: 0.05rem 0.5rem 0.15rem;
+  --color: var(--clr-neutral-300);
+  background-color: var(--background);
+  border-radius: var(--radius);
+  padding: var(--padding);
+  color: var(--color);
+}
+
+.text-button {
+  --background: var(--clr-primary-400);
+  --radius: 0.5rem;
+  --padding: 0.75rem 2rem 0.85rem;
+  --color: var(--clr-neutral-300);
+  --border-color: var(--clr-neutral-300);
+  background-color: var(--background);
+  border-radius: var(--radius);
+  padding: var(--padding);
+  color: var(--color);
+  border-color: var(--clr-neutral-300);
+}
+
+body {
+  font-family: var(--ff-body);
+  font-size: var(--fs-body);
+  overflow-x: hidden;
+}
+
+.container {
+  --width: 1300px;
+  --margin: 2rem;
+  width: min(var(--width), 100% - var(--margin) * 2);
+  margin-inline: auto;
+}
+
+.even-columns {
+  display: flex;
+}
+.even-columns > div,
+.even-columns > nav {
+  width: 50%;
+}
+
+.min-height-full-screen {
+  min-height: 95vh;
+}
+
+.flex-align-centered {
+  align-items: center;
+}
+
+.full-sized-img {
+  transform: scale(1.5);
+  position: relative;
+  left: 10rem;
+}
+
+.bg-square {
+  position: absolute;
+  background: var(--clr-neutral-300);
+  border-radius: 0 0 0 5rem;
+  width: 50vw;
+  height: 50vh;
+  top: 0;
+  z-index: -1;
+}
+
+header {
+  margin-top: 1rem;
+}
+
+nav.primary-navigation ul {
+  display: flex;
+  justify-content: flex-end;
+}
+nav.primary-navigation li {
+  list-style: none;
+  padding: 0.5rem 1.25rem;
+}
+nav.primary-navigation a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -77,6 +163,169 @@ select {
   --clr-neutral-400: hsl(231, 7%, 65%);
   --clr-neutral-500: hsl(230, 11%, 40%);
   --clr-neutral-900: hsl(230, 29%, 20%);
+  --ff-body: "Barlow", sans-serif;
+  --ff-heading: "Barlow Condensed", sans-serif;
+  --ff-nav: "Barlow Condensed", sans-serif;
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --fs-400: 0.9rem;
+  --fs-500: 1rem;
+  --fs-600: 1.125rem;
+  --fs-700: 4.5rem;
+  --fs-body: var(--fs-500);
+  --fs-heading: var(--fs-700);
+  --fs-nav: var(--fs-500);
+  --fs-button: var(--fs-500);
+  --ls-500: 0.25rem;
+  --ls-600: 0.35rem;
+  --lh-700: 4.5rem;
+  --ml-400: 1rem;
+  --mr-400: 1rem;
+  --mt-400: 1rem;
+  --mt-600: 3rem;
+  --mb-400: 1rem;
+  --mb-500: 2rem;
+  --mb-600: 4rem;
+}
+
+.text-primary-400 {
+  color: var(--clr-primary-400);
+}
+
+.text-neutral-300 {
+  color: var(--clr-neutral-300);
+}
+
+.text-neutral-400 {
+  color: var(--clr-neutral-400);
+}
+
+.text-neutral-500 {
+  color: var(--clr-neutral-500);
+}
+
+.text-neutral-900 {
+  color: var(--clr-neutral-900);
+}
+
+.bg-primary-400 {
+  background-color: var(--clr-primary-400);
+}
+
+.bg-neutral-300 {
+  background-color: var(--clr-neutral-300);
+}
+
+.bg-neutral-400 {
+  background-color: var(--clr-neutral-400);
+}
+
+.bg-neutral-500 {
+  background-color: var(--clr-neutral-500);
+}
+
+.bg-neutral-900 {
+  background-color: var(--clr-neutral-900);
+}
+
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
+.fs-400 {
+  font-size: var(--fs-400);
+}
+
+.fs-500 {
+  font-size: var(--fs-500);
+}
+
+.fs-600 {
+  font-size: var(--fs-600);
+}
+
+.fs-700 {
+  font-size: var(--fs-700);
+}
+
+.fs-body {
+  font-size: var(--fs-body);
+}
+
+.fs-heading {
+  font-size: var(--fs-heading);
+}
+
+.fs-nav {
+  font-size: var(--fs-nav);
+}
+
+.fs-button {
+  font-size: var(--fs-button);
+}
+
+.ls-500 {
+  letter-spacing: var(--ls-500);
+}
+
+.ls-600 {
+  letter-spacing: var(--ls-600);
+}
+
+.lh-700 {
+  line-height: var(--lh-700);
+}
+
+.ff-body {
+  font-family: var(--ff-body);
+}
+
+.ff-heading {
+  font-family: var(--ff-heading);
+}
+
+.ff-nav {
+  font-family: var(--ff-nav);
+}
+
+.tt-uppercase {
+  text-transform: uppercase;
+}
+
+.mr-400 {
+  margin-right: var(--mr-400);
+}
+
+.ml-400 {
+  margin-left: var(--ml-400);
+}
+
+.mt-400 {
+  margin-top: var(--mt-400);
+}
+
+.mt-600 {
+  margin-top: var(--mt-600);
+}
+
+.mb-400 {
+  margin-bottom: var(--mb-400);
+}
+
+.mb-500 {
+  margin-bottom: var(--mb-500);
+}
+
+.mb-600 {
+  margin-bottom: var(--mb-600);
+}
+
+.display-inline {
+  display: inline;
 }
 
 /*# sourceMappingURL=style.css.map */

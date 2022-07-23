@@ -1,76 +1,143 @@
-// Utility Reset for site
+@use "_var";
 
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+//Utility Classes
+
+//text color
+
+.text-primary-400 {
+  color: var(--clr-primary-400);
+}
+.text-neutral-300 {
+  color: var(--clr-neutral-300);
+}
+.text-neutral-400 {
+  color: var(--clr-neutral-400);
+}
+.text-neutral-500 {
+  color: var(--clr-neutral-500);
+}
+.text-neutral-900 {
+  color: var(--clr-neutral-900);
 }
 
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin: 0;
+//bg-color
+
+.bg-primary-400 {
+  background-color: var(--clr-primary-400);
+}
+.bg-neutral-300 {
+  background-color: var(--clr-neutral-300);
+}
+.bg-neutral-400 {
+  background-color: var(--clr-neutral-400);
+}
+.bg-neutral-500 {
+  background-color: var(--clr-neutral-500);
+}
+.bg-neutral-900 {
+  background-color: var(--clr-neutral-900);
 }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
-  list-style: none;
+//font-weight
+
+.fw-regular {
+  font-weight: var(--fw-regular);
 }
 
-/* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
+.fw-bold {
+  font-weight: var(--fw-bold);
 }
 
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
+//font-size
+
+.fs-400 {
+  font-size: var(--fs-400);
+}
+.fs-500 {
+  font-size: var(--fs-500);
+}
+.fs-600 {
+  font-size: var(--fs-600);
+}
+.fs-700 {
+  font-size: var(--fs-700);
 }
 
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
+.fs-body {
+  font-size: var(--fs-body);
+}
+.fs-heading {
+  font-size: var(--fs-heading);
+}
+.fs-nav {
+  font-size: var(--fs-nav);
+}
+.fs-button {
+  font-size: var(--fs-button);
 }
 
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
+//letter-spacing
+
+.ls-500 {
+  letter-spacing: var(--ls-500);
+}
+.ls-600 {
+  letter-spacing: var(--ls-600);
 }
 
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
+//line-height
+
+.lh-700 {
+  line-height: var(--lh-700);
 }
 
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
+//font-family
 
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+.ff-body {
+  font-family: var(--ff-body);
+}
+.ff-heading {
+  font-family: var(--ff-heading);
+}
+.ff-nav {
+  font-family: var(--ff-nav);
+}
+
+//text-transform
+
+.tt-uppercase {
+  text-transform: uppercase;
+}
+
+//margins
+
+.mr-400 {
+  margin-right: var(--mr-400);
+}
+
+.ml-400 {
+  margin-left: var(--ml-400);
+}
+
+.mt-400 {
+  margin-top: var(--mt-400);
+}
+.mt-600 {
+  margin-top: var(--mt-600);
+}
+
+.mb-400 {
+  margin-bottom: var(--mb-400);
+}
+.mb-500 {
+  margin-bottom: var(--mb-500);
+}
+.mb-600 {
+  margin-bottom: var(--mb-600);
+}
+
+//display classes
+
+.display-inline {
+  display: inline;
 }
