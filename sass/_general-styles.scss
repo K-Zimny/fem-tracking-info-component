@@ -1,3 +1,7 @@
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: var(--ff-body);
   font-size: var(--fs-body);
@@ -20,6 +24,17 @@ body {
   > div,
   > nav {
     width: 50%;
+
+    @media only screen and (max-width: 1023px) {
+      width: 100%;
+    }
+  }
+}
+
+.flex-column-reverse-mobile {
+  @media only screen and (max-width: 1023px) {
+    flex-flow: column-reverse;
+    justify-content: space-evenly;
   }
 }
 
@@ -37,6 +52,11 @@ body {
   transform: scale(1.5);
   position: relative;
   left: 10rem;
+
+  @media only screen and (max-width: 1023px) {
+    transform: scale(1);
+    left: 0rem;
+  }
 }
 
 //background square
@@ -49,4 +69,15 @@ body {
   height: 50vh;
   top: 0;
   z-index: -1;
+  left: 50%;
+}
+
+//flex
+
+.flex {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
 }

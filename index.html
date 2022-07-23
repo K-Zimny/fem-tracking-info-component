@@ -12,19 +12,31 @@
       href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <script src="script.js" defer></script>
   </head>
 
   <body>
     <header>
       <div class="container">
         <div class="even-columns | flex-align-centered">
-          <div>
+          <div class="| flex space-between">
             <a href="#">
               <img src="images/logo.svg" alt="Site Logo." />
             </a>
+            <img
+              id="hamburgerBtn"
+              src="images/icon-hamburger.svg"
+              alt="hamburger icon"
+            />
+            <img
+              style="display: none"
+              id="closeBtn"
+              src="images/icon-close.svg"
+              alt="Close-icon"
+            />
           </div>
           <nav class="primary-navigation">
-            <ul>
+            <ul id="navUl">
               <li>
                 <a href="#" class="text-neutral-900 fs-nav ff-nav fw-bold"
                   >Product</a
@@ -56,7 +68,7 @@
       <section>
         <div class="container">
           <div
-            class="even-columns | min-height-full-screen flex-align-centered"
+            class="even-columns flex-column-reverse-mobile | min-height-full-screen flex-align-centered"
           >
             <div>
               <p>
